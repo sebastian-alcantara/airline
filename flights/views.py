@@ -23,6 +23,9 @@ def flight(request, flight_id):
     }
     return render(request, "flights/flight.html", context)
 
+def test_view(request):
+    print("this is a test")
+
 def book(request, flight_id):
     try:
         passenger_id = int(request.POST["passenger"])
